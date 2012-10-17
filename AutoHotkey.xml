@@ -5,30 +5,152 @@
         <!-- %installdir%\plugins\APIs\Autohotkey.xml -->
         <Environment ignoreCase="yes" startFunc="(" stopFunc=")" paramSeparator="," terminal="" additionalWordChar="#_{@"/>
         <KeyWord name="#AllowSameLineComments"/>
-        <KeyWord name="#ClipboardTimeout"/>
-        <KeyWord name="#CommentFlag"/>
+        <KeyWord name="#ClipboardTimeout" func="yes">
+            <Overload retVal="">
+                <Param name="Milliseconds"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#CommentFlag" func="yes">
+            <Overload retVal="">
+                <Param name="NewString"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="#ErrorStdOut"/>
-        <KeyWord name="#EscapeChar"/>
-        <KeyWord name="#HotkeyInterval"/>
-        <KeyWord name="#HotkeyModifierTimeout"/>
-        <KeyWord name="#Hotstring"/>
-        <KeyWord name="#IfWinActive"/>
-        <KeyWord name="#IfWinExist"/>
-        <KeyWord name="#Include"/>
-        <KeyWord name="#IncludeAgain"/>
+        <KeyWord name="#EscapeChar" func="yes">
+            <Overload retVal="">
+                <Param name="NewString"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#HotkeyInterval" func="yes">
+            <Overload retVal="">
+                <Param name="Milliseconds"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#HotkeyModifierTimeout" func="yes">
+            <Overload retVal="">
+                <Param name="Milliseconds"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#Hotstring" func="yes">
+            <Overload retVal="">
+                <Param name="NoMouse"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="EndChars"/>
+                <Param name="NewChars"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="NewOptions"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#If" func="yes">
+            <Overload retVal="">
+                <Param name="Expression"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#IfTimeout" func="yes">
+            <Overload retVal="">
+                <Param name="Timeout"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#IfWinActive" func="yes">
+            <Overload retVal="">
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#IfWinExist" func="yes">
+            <Overload retVal="">
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#IfWinNotActive" func="yes">
+            <Overload retVal="">
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#IfWinNotExist" func="yes">
+            <Overload retVal="">
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#Include" func="yes">
+            <Overload retVal="">
+                <Param name="FileOrDirName"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="&lt;LibName&gr;"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#IncludeAgain" func="yes">
+            <Overload retVal="">
+                <Param name="FileOrDirName"/>
+            </Overload>
+        </KeyWord>
+        <Keyword name="#InputLevel" func="yes">
+            <Overload retVal="">
+                <Param name="Level"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="#InstallKeybdHook"/>
         <KeyWord name="#InstallMouseHook"/>
-        <KeyWord name="#KeyHistory"/>
-        <KeyWord name="#MaxHotkeysPerInterval"/>
-        <KeyWord name="#MaxMem"/>
-        <KeyWord name="#MaxThreads"/>
-        <KeyWord name="#MaxThreadsBuffer"/>
-        <KeyWord name="#MaxThreadsPerHotkey"/>
+        <KeyWord name="#KeyHistory" func="yes">
+            <Overload retVal="">
+                <Param name="MaxEvents"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#MaxHotkeysPerInterval" func="yes">
+            <Overload retVal="">
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#MaxMem" func="yes">
+            <Overload retVal="">
+                <Param name="Megabytes"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#MaxThreads" func="yes">
+            <Overload retVal="">
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#MaxThreadsBuffer" func="yes">
+            <Overload retVal="">
+                <Param name="On|Off"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#MaxThreadsPerHotkey" func="yes">
+            <Overload retVal="">
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#MenuMaskKey" func="yes">
+            <Overload retVal="">
+                <Param name="KeyName"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="#NoEnv"/>
         <KeyWord name="#NoTrayIcon"/>
         <KeyWord name="#Persistent"/>
-        <KeyWord name="#SingleInstance"/>
-        <KeyWord name="#UseHook"/>
+        <KeyWord name="#SingleInstance" func="yes">
+            <Overload retVal="">
+                <Param name="Force|Ignore|Off"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#UseHook" func="yes">
+            <Overload retVal="">
+                <Param name="On|Off"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="#Warn" func="yes">
+            <Overload retVal="">
+                <Param name="WarningType"/>
+                <Param name="WarningMode"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="#WinActivateForce"/>
         <KeyWord name="%"/>
         <KeyWord name="__Call"/>
