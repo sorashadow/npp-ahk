@@ -837,7 +837,7 @@
         <KeyWord name="HKEY_LOCAL_MACHINE"/>
         <KeyWord name="HKEY_USERS"/>
         <KeyWord name="HKLM"/>
-        <KeyWord name="Hku"/>
+        <KeyWord name="HKU"/>
         <KeyWord name="Home"/>
         <KeyWord name="Hotkey"/>
         <KeyWord name="Hours"/>
@@ -1191,19 +1191,8 @@
         <KeyWord name="ReadOnly"/>
         <KeyWord name="RealTime"/>
         <KeyWord name="Redraw"/>
-        <KeyWord name="Reg_Binary"/>
-        <KeyWord name="Reg_DWord"/>
-        <KeyWord name="Reg_DWord_Big_Endian"/>
-        <KeyWord name="Reg_Expand_SZ"/>
-        <KeyWord name="Reg_Full_Resource_Descriptor"/>
-        <KeyWord name="Reg_Link"/>
-        <KeyWord name="REG_MULTI_SZ"/>
-        <KeyWord name="Reg_QWord"/>
-        <KeyWord name="Reg_Resource_List"/>
-        <KeyWord name="Reg_Resource_Requirements_List"/>
-        <KeyWord name="Reg_SZ"/>
         <KeyWord name="RegDelete"/>
-        <KeyWord name="Regex"/>
+        <KeyWord name="RegEx"/>
         <KeyWord name="RegExMatch" func="yes">
             <Overload retVal="">
                 <Param name="Haystack"/>
@@ -1245,6 +1234,17 @@
         </KeyWord>
         <KeyWord name="RegRead"/>
         <KeyWord name="RegWrite"/>
+        <KeyWord name="Reg_Binary"/>
+        <KeyWord name="Reg_DWord"/>
+        <KeyWord name="Reg_DWord_Big_Endian"/>
+        <KeyWord name="Reg_Expand_SZ"/>
+        <KeyWord name="Reg_Full_Resource_Descriptor"/>
+        <KeyWord name="Reg_Link"/>
+        <KeyWord name="REG_MULTI_SZ"/>
+        <KeyWord name="Reg_QWord"/>
+        <KeyWord name="Reg_Resource_List"/>
+        <KeyWord name="Reg_Resource_Requirements_List"/>
+        <KeyWord name="Reg_SZ"/>
         <KeyWord name="Relative"/>
         <KeyWord name="Reload"/>
         <KeyWord name="Rename"/>
