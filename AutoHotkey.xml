@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <NotepadPlus>
     <AutoComplete language="AutoHotkey">
-        <!-- Based on infogulch's Autocomplete v0.1 -->
-        <!-- %installdir%\plugins\APIs\Autohotkey.xml -->
+        <!-- Notepad++ Autocomplete for AutoHotkey -->
+        <!-- Version: 1.1 (Thu October 18, 2012) -->
+        <!-- Created: Mon October 15, 2012 -->
+        <!-- Main wordlist by: fincs & SciTE4AutoHotkey v3.0.00 -->
+        <!-- Credits: infogulch, jNizM, tidbit, twiz, vsub -->
+        <!-- Info: Save this as an xml file named after your language.-->
+        <!-- Info: Put the file in %install_Dir%\plugins\APIs.-->
+        <!-- Info: Example: %Install_Dir%\plugins\APIs\AutoHotkey.xml.-->
         <Environment ignoreCase="yes" startFunc="(" stopFunc=")" paramSeparator="," terminal="" additionalWordChar="#{@"/>
         <KeyWord name="Abort"/>
         <KeyWord name="AboveNormal"/>
@@ -53,9 +59,13 @@
                 <Param name="Number"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="Autosize"/>
-        <KeyWord name="AutoTrim"/>
-                <KeyWord name="A_AHKPath"/>
+        <KeyWord name="AutoSize"/>
+        <KeyWord name="AutoTrim" func="no">
+            <Overload retVal="">
+                <Param name="On|Off"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="A_AHKPath"/>
         <KeyWord name="A_AHKVersion"/>
         <KeyWord name="A_AppData"/>
         <KeyWord name="A_AppDataCommon"/>
@@ -199,11 +209,19 @@
         <KeyWord name="BitShiftRight"/>
         <KeyWord name="BitXOr"/>
         <KeyWord name="Blind"/>
-        <KeyWord name="BlockInput"/>
+        <KeyWord name="BlockInput" func="no">
+            <Overload retVal="">
+                <Param name="Mode"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Bold"/>
         <KeyWord name="Border"/>
         <KeyWord name="Bottom"/>
-        <KeyWord name="Break"/>
+        <KeyWord name="Break" func="no">
+            <Overload retVal="">
+                <Param name="LoopLabel"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Browser_Back"/>
         <KeyWord name="Browser_Favorites"/>
         <KeyWord name="Browser_Forward"/>
@@ -217,8 +235,13 @@
         <KeyWord name="ByRef"/>
         <KeyWord name="Cancel"/>
         <KeyWord name="Capacity"/>
-        <KeyWord name="Capslock"/>
+        <KeyWord name="CapsLock"/>
         <KeyWord name="Caption"/>
+        <KeyWord name="Catch" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Ceil" func="yes">
             <Overload retVal="">
                 <Param name="Number"/>
@@ -240,7 +263,12 @@
         <KeyWord name="Click"/>
         <KeyWord name="Clipboard"/>
         <KeyWord name="Clipboardall"/>
-        <KeyWord name="ClipWait"/>
+        <KeyWord name="ClipWait" func="no">
+            <Overload retVal="">
+                <Param name="SecondsToWait"/>
+                <Param name="1"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Close"/>
         <KeyWord name="Color"/>
         <KeyWord name="Combobox"/>
@@ -260,28 +288,149 @@
         <KeyWord name="ComObjValue"/>
         <KeyWord name="Comspec"/>
         <KeyWord name="Contains"/>
-        <KeyWord name="Continue"/>
-        <KeyWord name="Control"/>
-        <KeyWord name="ControlClick"/>
-        <KeyWord name="ControlFocus"/>
-        <KeyWord name="ControlGet"/>
-        <KeyWord name="ControlGetFocus"/>
-        <KeyWord name="ControlGetPos"/>
-        <KeyWord name="ControlGetText"/>
+        <KeyWord name="Continue" func="no">
+            <Overload retVal="">
+                <Param name="LoopLabel"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="Control" func="no">
+            <Overload retVal="">
+                <Param name="Cmd"/>
+                <Param name="Value"/>
+                <Param name="Control"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlClick" func="no">
+            <Overload retVal="">
+                <Param name="Control-or-Pos"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="WhichButton"/>
+                <Param name="ClickCount"/>
+                <Param name="Options"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlFocus" func="no">
+            <Overload retVal="">
+                <Param name="Control"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlGet" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Cmd"/>
+                <Param name="Value"/>
+                <Param name="Control"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlGetFocus" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlGetPos" func="no">
+            <Overload retVal="">
+                <Param name="X"/>
+                <Param name="Y"/>
+                <Param name="Width"/>
+                <Param name="Height"/>
+                <Param name="Control"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlGetText" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Control"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="ControlList"/>
         <KeyWord name="ControlListHWND"/>
-        <KeyWord name="ControlMove"/>
-        <KeyWord name="ControlSend"/>
-        <KeyWord name="ControlSendRaw"/>
-        <KeyWord name="ControlSetText"/>
-        <KeyWord name="CoordMode"/>
+        <KeyWord name="ControlMove" func="no">
+            <Overload retVal="">
+                <Param name="Control"/>
+                <Param name="X"/>
+                <Param name="Y"/>
+                <Param name="Width"/>
+                <Param name="Height"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlSend" func="no">
+            <Overload retVal="">
+                <Param name="Control"/>
+                <Param name="Keys"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlSendRaw" func="no">
+            <Overload retVal="">
+                <Param name="Control"/>
+                <Param name="Keys"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ControlSetText" func="no">
+            <Overload retVal="">
+                <Param name="Control"/>
+                <Param name="NewText"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="CoordMode" func="no">
+            <Overload retVal="">
+                <Param name="ToolTip|Pixel|Mouse|Caret|Menu"/>
+                <Param name="Screen|Window|Client"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Cos" func="yes">
             <Overload retVal="">
                 <Param name="Number"/>
             </Overload>
         </KeyWord>
         <KeyWord name="Count"/>
-        <KeyWord name="Critical"/>
+        <KeyWord name="Critical" func="no">
+            <Overload retVal="">
+                <Param name="On|Off|Interval"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Ctrl"/>
         <KeyWord name="CtrlBreak"/>
         <KeyWord name="CtrlDown"/>
@@ -297,8 +446,16 @@
         <KeyWord name="Delimiter"/>
         <KeyWord name="Deref"/>
         <KeyWord name="Destroy"/>
-        <KeyWord name="DetectHiddenText"/>
-        <KeyWord name="DetectHiddenWindows"/>
+        <KeyWord name="DetectHiddenText" func="no">
+            <Overload retVal="">
+                <Param name="On|Off"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="DetectHiddenWindows" func="no">
+            <Overload retVal="">
+                <Param name="On|Off"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Digit"/>
         <KeyWord name="Disable"/>
         <KeyWord name="Disabled"/>
@@ -316,9 +473,26 @@
             </Overload>
         </KeyWord>
         <KeyWord name="Down"/>
-        <KeyWord name="Drive"/>
-        <KeyWord name="DriveGet"/>
-        <KeyWord name="DriveSpaceFree"/>
+        <KeyWord name="Drive" func="no">
+            <Overload retVal="">
+                <Param name="Sub-command"/>
+                <Param name="Drive"/>
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="DriveGet" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Cmd"/>
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="DriveSpaceFree" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Path"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="DropDownList"/>
         <KeyWord name="Edit"/>
         <KeyWord name="Eject"/>
@@ -328,20 +502,60 @@
         <KeyWord name="End"/>
         <KeyWord name="EndRepeat"/>
         <KeyWord name="Enter"/>
-        <KeyWord name="EnvAdd"/>
-        <KeyWord name="EnvDiv"/>
-        <KeyWord name="EnvGet"/>
-        <KeyWord name="EnvMult"/>
-        <KeyWord name="EnvSet"/>
-        <KeyWord name="EnvSub"/>
+        <KeyWord name="EnvAdd" func="no">
+            <Overload retVal="">
+                <Param name="Var"/>
+                <Param name="Value"/>
+                <Param name="TimeUnits"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="EnvDiv" func="no">
+            <Overload retVal="">
+                <Param name="Var"/>
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="EnvGet" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="EnvVarName"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="EnvMult" func="no">
+            <Overload retVal="">
+                <Param name="Var"/>
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="EnvSet" func="no">
+            <Overload retVal="">
+                <Param name="EnvVar"/>
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="EnvSub" func="no">
+            <Overload retVal="">
+                <Param name="Var"/>
+                <Param name="Value"/>
+                <Param name="TimeUnits"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="EnvUpdate"/>
         <KeyWord name="Error"/>
         <KeyWord name="ErrorLevel"/>
         <KeyWord name="Esc"/>
         <KeyWord name="Escape"/>
         <KeyWord name="Exception"/>
-        <KeyWord name="Exit"/>
-        <KeyWord name="ExitApp"/>
+        <KeyWord name="Exit" func="no">
+            <Overload retVal="">
+                <Param name="ExitCode"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="ExitApp" func="no">
+            <Overload retVal="">
+                <Param name="ExitCode"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Exp" func="yes">
             <Overload retVal="">
                 <Param name="N"/>
@@ -375,36 +589,194 @@
         <KeyWord name="F23"/>
         <KeyWord name="F24"/>
         <KeyWord name="False"/>
-        <KeyWord name="FileAppend"/>
-        <KeyWord name="FileCopy"/>
-        <KeyWord name="FileCopyDir"/>
-        <KeyWord name="FileCreateDir"/>
-        <KeyWord name="FileCreateShortcut"/>
-        <KeyWord name="FileDelete"/>
-        <KeyWord name="FileEncoding"/>
+        <KeyWord name="FileAppend" func="no">
+            <Overload retVal="">
+                <Param name="Text"/>
+                <Param name="Filename"/>
+                <Param name="Encoding"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileCopy" func="no">
+            <Overload retVal="">
+                <Param name="SourcePattern"/>
+                <Param name="DestPattern"/>
+                <Param name="Flag"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileCopyDir" func="no">
+            <Overload retVal="">
+                <Param name="Source"/>
+                <Param name="Dest"/>
+                <Param name="Flag"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileCreateDir" func="no">
+            <Overload retVal="">
+                <Param name="DirName"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileCreateShortcut" func="no">
+            <Overload retVal="">
+                <Param name="Target"/>
+                <Param name="LinkFile"/>
+                <Param name="WorkingDir"/>
+                <Param name="Args"/>
+                <Param name="Description"/>
+                <Param name="IconFile"/>
+                <Param name="ShortcutKey"/>
+                <Param name="IconNumber"/>
+                <Param name="RunState"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileDelete func="no">
+            <Overload retVal="">
+                <Param name="FilePattern"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileEncoding" func="no">
+            <Overload retVal="">
+                <Param name="Encoding"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="FileExist" func="yes">
             <Overload retVal="">
                 <Param name="FilePattern"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="FileGetAttrib"/>
-        <KeyWord name="FileGetShortcut"/>
-        <KeyWord name="FileGetSize"/>
-        <KeyWord name="FileGetTime"/>
-        <KeyWord name="FileGetVersion"/>
-        <KeyWord name="FileInstall"/>
-        <KeyWord name="FileMove"/>
-        <KeyWord name="FileMoveDir"/>
-        <KeyWord name="FileOpen"/>
-        <KeyWord name="FileRead"/>
-        <KeyWord name="FileReadLine"/>
-        <KeyWord name="FileRecycle"/>
-        <KeyWord name="FileRecycleEmpty"/>
-        <KeyWord name="FileRemoveDir"/>
-        <KeyWord name="FileSelectFile"/>
-        <KeyWord name="FileSelectFolder"/>
-        <KeyWord name="FileSetAttrib"/>
-        <KeyWord name="FileSetTime"/>
+        <KeyWord name="FileGetAttrib" func="yes">
+            <Overload retVal="">
+                <Param name="FilePattern"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileGetAttrib" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Filename"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileGetShortcut func="no">
+            <Overload retVal="">
+                <Param name="LinkFile"/>
+                <Param name="OutTarget"/>
+                <Param name="OutDir"/>
+                <Param name="OutArgs"/>
+                <Param name="OutDescription"/>
+                <Param name="OutIcon"/>
+                <Param name="OutIconNum"/>
+                <Param name="OutRunState"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileGetSize" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Filename"/>
+                <Param name="Units"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileGetTime" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Filename"/>
+                <Param name="WhichTime"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileGetVersion" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Filename"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileInstall" func="no">
+            <Overload retVal="">
+                <Param name="Source"/>
+                <Param name="Dest"/>
+                <Param name="Flag"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileMove" func="no">
+            <Overload retVal="">
+                <Param name="SourcePattern"/>
+                <Param name="DestPattern"/>
+                <Param name="Flag"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileMoveDir" func="no">
+            <Overload retVal="">
+                <Param name="Source"/>
+                <Param name="Dest"/>
+                <Param name="Flag"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileOpen" func="yes">
+            <Overload retVal="">
+                <Param name="Filename"/>
+                <Param name="Flags"/>
+                <Param name="Encoding"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileRead" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Filename"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileReadLine" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Filename"/>
+                <Param name="LineNum"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileRecycle" func="no">
+            <Overload retVal="">
+                <Param name="FilePattern"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileRecycleEmpty" func="no">
+            <Overload retVal="">
+                <Param name="DriveLetter"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileRemoveDir" func="no">
+            <Overload retVal="">
+                <Param name="DirName"/>
+                <Param name="Recurse?"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileSelectFile" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Options"/>
+                <Param name="RootDir\Filename"/>
+                <Param name="Prompt"/>
+                <Param name="Filter"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileSelectFolder" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="StartingFolder"/>
+                <Param name="Options"/>
+                <Param name="Prompt"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileSetAttrib" func="no">
+            <Overload retVal="">
+                <Param name="Attributes"/>
+                <Param name="Filepattern"/>
+                <Param name="OperateOnFolders?"/>
+                <Param name="Recurse?"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="FileSetTime" func="no">
+            <Overload retVal="">
+                <Param name="YYYYMMDDHH24MISS"/>
+                <Param name="FilePattern"/>
+                <Param name="WhichTime"/>
+                <Param name="OperateOnFolders?"/>
+                <Param name="Recurse?"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="FileSystem"/>
         <KeyWord name="First"/>
         <KeyWord name="Flash"/>
@@ -1161,40 +1533,40 @@
         <KeyWord name="__New"/>
         <KeyWord name="__Set"/>
 <!--
-Alphabet Order:     A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _
-Missing:            # { % @ $ ^ ~ +
+Alphabet Order:     1 to 9, A to Z, _
+Missing:            0, a to z, #, {, %, @, $, ^, ~, +
 Alphabet Notes:     # and { Seems broken, Possibly related to additionalWordChar="", but _ works.
 -->
 <!--    'Broken' words list
 
         <KeyWord name="#AllowSameLineComments"/>
-        <KeyWord name="#ClipboardTimeout" func="yes">
+        <KeyWord name="#ClipboardTimeout" func="no">
             <Overload retVal="">
                 <Param name="Milliseconds"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#CommentFlag" func="yes">
+        <KeyWord name="#CommentFlag" func="no">
             <Overload retVal="">
                 <Param name="NewString"/>
             </Overload>
         </KeyWord>
         <KeyWord name="#ErrorStdOut"/>
-        <KeyWord name="#EscapeChar" func="yes">
+        <KeyWord name="#EscapeChar" func="no">
             <Overload retVal="">
                 <Param name="NewString"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#HotkeyInterval" func="yes">
+        <KeyWord name="#HotkeyInterval" func="no">
             <Overload retVal="">
                 <Param name="Milliseconds"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#HotkeyModifierTimeout" func="yes">
+        <KeyWord name="#HotkeyModifierTimeout" func="no">
             <Overload retVal="">
                 <Param name="Milliseconds"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#Hotstring" func="yes">
+        <KeyWord name="#Hotstring" func="no">
             <Overload retVal="">
                 <Param name="NoMouse"/>
             </Overload>
@@ -1206,41 +1578,41 @@ Alphabet Notes:     # and { Seems broken, Possibly related to additionalWordChar
                 <Param name="NewOptions"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#If" func="yes">
+        <KeyWord name="#If" func="no">
             <Overload retVal="">
                 <Param name="Expression"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#IfTimeout" func="yes">
+        <KeyWord name="#IfTimeout" func="no">
             <Overload retVal="">
                 <Param name="Timeout"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#IfWinActive" func="yes">
+        <KeyWord name="#IfWinActive" func="no">
             <Overload retVal="">
                 <Param name="WinTitle"/>
                 <Param name="WinText"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#IfWinExist" func="yes">
+        <KeyWord name="#IfWinExist" func="no">
             <Overload retVal="">
                 <Param name="WinTitle"/>
                 <Param name="WinText"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#IfWinNotActive" func="yes">
+        <KeyWord name="#IfWinNotActive" func="no">
             <Overload retVal="">
                 <Param name="WinTitle"/>
                 <Param name="WinText"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#IfWinNotExist" func="yes">
+        <KeyWord name="#IfWinNotExist" func="no">
             <Overload retVal="">
                 <Param name="WinTitle"/>
                 <Param name="WinText"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#Include" func="yes">
+        <KeyWord name="#Include" func="no">
             <Overload retVal="">
                 <Param name="FileOrDirName"/>
             </Overload>
@@ -1248,49 +1620,49 @@ Alphabet Notes:     # and { Seems broken, Possibly related to additionalWordChar
                 <Param name="&lt;LibName&gr;"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#IncludeAgain" func="yes">
+        <KeyWord name="#IncludeAgain" func="no">
             <Overload retVal="">
                 <Param name="FileOrDirName"/>
             </Overload>
         </KeyWord>
-        <Keyword name="#InputLevel" func="yes">
+        <Keyword name="#InputLevel" func="no">
             <Overload retVal="">
                 <Param name="Level"/>
             </Overload>
         </KeyWord>
         <KeyWord name="#InstallKeybdHook"/>
         <KeyWord name="#InstallMouseHook"/>
-        <KeyWord name="#KeyHistory" func="yes">
+        <KeyWord name="#KeyHistory" func="no">
             <Overload retVal="">
                 <Param name="MaxEvents"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#MaxHotkeysPerInterval" func="yes">
+        <KeyWord name="#MaxHotkeysPerInterval" func="no">
             <Overload retVal="">
                 <Param name="Value"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#MaxMem" func="yes">
+        <KeyWord name="#MaxMem" func="no">
             <Overload retVal="">
                 <Param name="Megabytes"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#MaxThreads" func="yes">
+        <KeyWord name="#MaxThreads" func="no">
             <Overload retVal="">
                 <Param name="Value"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#MaxThreadsBuffer" func="yes">
+        <KeyWord name="#MaxThreadsBuffer" func="no">
             <Overload retVal="">
                 <Param name="On|Off"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#MaxThreadsPerHotkey" func="yes">
+        <KeyWord name="#MaxThreadsPerHotkey" func="no">
             <Overload retVal="">
                 <Param name="Value"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#MenuMaskKey" func="yes">
+        <KeyWord name="#MenuMaskKey" func="no">
             <Overload retVal="">
                 <Param name="KeyName"/>
             </Overload>
@@ -1298,17 +1670,17 @@ Alphabet Notes:     # and { Seems broken, Possibly related to additionalWordChar
         <KeyWord name="#NoEnv"/>
         <KeyWord name="#NoTrayIcon"/>
         <KeyWord name="#Persistent"/>
-        <KeyWord name="#SingleInstance" func="yes">
+        <KeyWord name="#SingleInstance" func="no">
             <Overload retVal="">
                 <Param name="Force|Ignore|Off"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#UseHook" func="yes">
+        <KeyWord name="#UseHook" func="no">
             <Overload retVal="">
                 <Param name="On|Off"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="#Warn" func="yes">
+        <KeyWord name="#Warn" func="no">
             <Overload retVal="">
                 <Param name="WarningType"/>
                 <Param name="WarningMode"/>
@@ -1316,12 +1688,6 @@ Alphabet Notes:     # and { Seems broken, Possibly related to additionalWordChar
         </KeyWord>
         <KeyWord name="#WinActivateForce"/>
 
-        <KeyWord name="%"/>
-        <KeyWord name="{#}"/>
-        <KeyWord name="{$}"/>
-        <KeyWord name="{^}"/>
-        <KeyWord name="{~}"/>
-        <KeyWord name="{+}"/>
         <KeyWord name="{Alt}"/>
         <KeyWord name="{AltDown}"/>
         <KeyWord name="{AltUp}"/>
@@ -1490,6 +1856,11 @@ Alphabet Notes:     # and { Seems broken, Possibly related to additionalWordChar
         <KeyWord name="{WheelUp}"/>
         <KeyWord name="{XButton1}"/>
         <KeyWord name="{XButton2}"/>
+        <KeyWord name="{#}"/>
+        <KeyWord name="{$}"/>
+        <KeyWord name="{^}"/>
+        <KeyWord name="{~}"/>
+        <KeyWord name="{+}"/>
 -->
     </AutoComplete>
 </NotepadPlus>
