@@ -628,7 +628,7 @@
                 <Param name="RunState"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="FileDelete func="no">
+        <KeyWord name="FileDelete" func="no">
             <Overload retVal="">
                 <Param name="FilePattern"/>
             </Overload>
@@ -654,7 +654,7 @@
                 <Param name="Filename"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="FileGetShortcut func="no">
+        <KeyWord name="FileGetShortcut" func="no">
             <Overload retVal="">
                 <Param name="LinkFile"/>
                 <Param name="OutTarget"/>
@@ -991,7 +991,7 @@
             </Overload>
         </KeyWord>
         <KeyWord name="LogOff"/>
-        <KeyWord name="Loop " func="yes">
+        <KeyWord name="Loop" func="yes">
             <Overload retVal="">
                 <Param name="files &amp; folders"/>
             </Overload>
