@@ -2,7 +2,7 @@
 <NotepadPlus>
     <AutoComplete language="AutoHotkey">
         <!-- Notepad++ Autocomplete for AutoHotkey -->
-        <!-- Version: 1.3 (Wed October 24, 2012) -->
+        <!-- Version: 1.1.4 (Wed October 24, 2012) -->
         <!-- Created: Mon October 15, 2012 -->
         <!-- Main wordlist by: fincs & SciTE4AutoHotkey v3.0.00 -->
         <!-- Credits: infogulch, jNizM, tidbit, twiz, vsub -->
@@ -1484,40 +1484,109 @@
         <KeyWord name="OnMessage" func="yes">
             <Overload retVal="">
                 <Param name="MsgNumber"/>
-            </Overload>
-            <Overload retVal="">
-                <Param name="MsgNumber"/>
                 <Param name="&quot;FunctionName&quot;"/>
+                <Param name="MaxThreads"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="OnExit" func="no">
+            <Overload retVal="">
+                <Param name="Label"/>
             </Overload>
         </KeyWord>
         <KeyWord name="Or"/>
-        <KeyWord name="OutputDebug"/>
+        <KeyWord name="OutputDebug" func="no">
+            <Overload retVal="">
+                <Param name="Text"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="OwnDialogs"/>
         <KeyWord name="Owner"/>
         <KeyWord name="Parse"/>
         <KeyWord name="Password"/>
-        <KeyWord name="Pause"/>
+        <KeyWord name="Pause" func="no">
+            <Overload retVal="">
+                <Param name="On|Off|Toggle"/>
+                <Param name="OperateOnUnderlyingThread?"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Pgdn"/>
         <KeyWord name="Pgup"/>
         <KeyWord name="Pic"/>
         <KeyWord name="Picture"/>
         <KeyWord name="Pid"/>
         <KeyWord name="Pixel"/>
-        <KeyWord name="PixelGetColor"/>
-        <KeyWord name="PixelSearch"/>
+        <KeyWord name="PixelGetColor" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="X"/>
+                <Param name="Y"/>
+                <Param name="Alt|Slow|RGB"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="PixelSearch" func="no">
+            <Overload retVal="">
+                <Param name="OutputVarX"/>
+                <Param name="OutputVarY"/>
+                <Param name="X1"/>
+                <Param name="Y1"/>
+                <Param name="X2"/>
+                <Param name="Y2"/>
+                <Param name="ColorID"/>
+                <Param name="Variation"/>
+                <Param name="Fast|RGB"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Pos"/>
-        <KeyWord name="PostMessage"/>
+        <KeyWord name="PostMessage" func="no">
+            <Overload retVal="">
+                <Param name="Msg"/>
+                <Param name="wParam"/>
+                <Param name="lParam"/>
+                <Param name="Control"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Pow"/>
         <KeyWord name="PrintScreen"/>
         <KeyWord name="Priority"/>
-        <KeyWord name="Process"/>
+        <KeyWord name="Process" func="no">
+            <Overload retVal="">
+                <Param name="Cmd"/>
+                <Param name="PID-or-Name"/>
+                <Param name="Param3"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="ProcessName"/>
         <KeyWord name="ProcessPath"/>
         <KeyWord name="ProgramFiles"/>
-        <KeyWord name="Progress"/>
+        <KeyWord name="Progress" func="no">
+            <Overload retVal="">
+                <Param name="Off"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="ProgressParam1"/>
+                <Param name="SubText"/>
+                <Param name="MainText"/>
+                <Param name="WinTitle"/>
+                <Param name="FontName"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Radio"/>
         <KeyWord name="RAlt"/>
-        <KeyWord name="Random"/>
+        <KeyWord name="Random" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Min"/>
+                <Param name="Max"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name=""/>
+                <Param name="NewSeed"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Range"/>
         <KeyWord name="Raw"/>
         <KeyWord name="RButton"/>
@@ -1527,13 +1596,15 @@
         <KeyWord name="ReadOnly"/>
         <KeyWord name="RealTime"/>
         <KeyWord name="Redraw"/>
-        <KeyWord name="RegDelete"/>
+        <KeyWord name="RegDelete" func="no">
+            <Overload retVal="">
+                <Param name="RootKey"/>
+                <Param name="SubKey"/>
+                <Param name="ValueName"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="RegEx"/>
         <KeyWord name="RegExMatch" func="yes">
-            <Overload retVal="">
-                <Param name="Haystack"/>
-                <Param name="NeedleRegEx"/>
-            </Overload>
             <Overload retVal="">
                 <Param name="Haystack"/>
                 <Param name="NeedleRegEx"/>
@@ -1542,10 +1613,6 @@
             </Overload>
         </KeyWord>
         <KeyWord name="RegExReplace" func="yes">
-            <Overload retVal="">
-                <Param name="Haystack"/>
-                <Param name="NeedleRegEx"/>
-            </Overload>
             <Overload retVal="">
                 <Param name="Haystack"/>
                 <Param name="NeedleRegEx"/>
@@ -1560,23 +1627,35 @@
         <KeyWord name="RegisterCallback" func="yes">
             <Overload retVal="">
                 <Param name="&quot;FunctionName&quot;"/>
-            </Overload>
-            <Overload retVal="">
-                <Param name="&quot;FunctionName&quot;"/>
                 <Param name="Options = &quot;&quot;"/>
                 <Param name="ParamCount = FormalCount"/>
                 <Param name="EventInfo = Address"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="RegRead"/>
-        <KeyWord name="RegWrite"/>
+        <KeyWord name="RegRead" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="RootKey"/>
+                <Param name="SubKey"/>
+                <Param name="ValueName"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="RegWrite" func="no">
+            <Overload retVal="">
+                <Param name="ValueType"/>
+                <Param name="RootKey"/>
+                <Param name="SubKey"/>
+                <Param name="ValueName"/>
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Reg_Binary"/>
         <KeyWord name="Reg_DWord"/>
         <KeyWord name="Reg_DWord_Big_Endian"/>
         <KeyWord name="Reg_Expand_SZ"/>
         <KeyWord name="Reg_Full_Resource_Descriptor"/>
         <KeyWord name="Reg_Link"/>
-        <KeyWord name="REG_MULTI_SZ"/>
+        <KeyWord name="Reg_Multi_SZ"/>
         <KeyWord name="Reg_QWord"/>
         <KeyWord name="Reg_Resource_List"/>
         <KeyWord name="Reg_Resource_Requirements_List"/>
@@ -1589,7 +1668,11 @@
         <KeyWord name="Resize"/>
         <KeyWord name="Restore"/>
         <KeyWord name="Retry"/>
-        <KeyWord name="Return"/>
+        <KeyWord name="Return" func="no">
+            <Overload retVal="">
+                <Param name="Expression"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="RGB"/>
         <KeyWord name="Right"/>
         <KeyWord name="RightClick"/>
@@ -1605,9 +1688,29 @@
         </KeyWord>
         <KeyWord name="RShift"/>
         <KeyWord name="RTrim"/>
-        <KeyWord name="Run"/>
-        <KeyWord name="RunAs"/>
-        <KeyWord name="RunWait"/>
+        <KeyWord name="Run" func="no">
+            <Overload retVal="">
+                <Param name="Target"/>
+                <Param name="WorkingDir"/>
+                <Param name="Max|Min|Hide|UserErrorLevel"/>
+                <Param name="OutputVarPID"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="RunAs" func="no">
+            <Overload retVal="">
+                <Param name="User"/>
+                <Param name="Password"/>
+                <Param name="Domain"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="RunWait" func="no">
+            <Overload retVal="">
+                <Param name="Target"/>
+                <Param name="WorkingDir"/>
+                <Param name="Max|Min|Hide|UserErrorLevel"/>
+                <Param name="OutputVarPID"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="RWin"/>
         <KeyWord name="RWinDown"/>
         <KeyWord name="RWinUp"/>
@@ -1618,58 +1721,250 @@
         <KeyWord name="ScrollLock"/>
         <KeyWord name="Seconds"/>
         <KeyWord name="Section"/>
-        <KeyWord name="Send"/>
-        <KeyWord name="SendEvent"/>
-        <KeyWord name="SendInput"/>
-        <KeyWord name="SendLevel"/>
-        <KeyWord name="SendMessage"/>
-        <KeyWord name="SendMode"/>
-        <KeyWord name="SendPlay"/>
-        <KeyWord name="SendRaw"/>
+        <KeyWord name="Send" func="no">
+            <Overload retVal="">
+                <Param name="Keys"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SendEvent" func="no">
+            <Overload retVal="">
+                <Param name="Keys"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SendInput" func="no">
+            <Overload retVal="">
+                <Param name="Keys"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SendLevel" func="no">
+            <Overload retVal="">
+                <Param name="Level"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SendMessage" func="no">
+            <Overload retVal="">
+                <Param name="Msg"/>
+                <Param name="wParam"/>
+                <Param name="lParam"/>
+                <Param name="Control"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SendMode" func="no">
+            <Overload retVal="">
+                <Param name="Input|Play|Event|InputThenPlay"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SendPlay" func="no">
+            <Overload retVal="">
+                <Param name="Keys"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SendRaw" func="no">
+            <Overload retVal="">
+                <Param name="Keys"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Serial"/>
-        <KeyWord name="SetBatchLines"/>
-        <KeyWord name="SetCapslockState"/>
-        <KeyWord name="SetControlDelay"/>
-        <KeyWord name="SetDefaultMouseSpeed"/>
-        <KeyWord name="SetEnv"/>
-        <KeyWord name="SetFormat"/>
-        <KeyWord name="SetKeyDelay"/>
+        <KeyWord name="SetBatchLines" func="no">
+            <Overload retVal="">
+                <Param name="ms"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="LineCount"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetCapslockState" func="no">
+            <Overload retVal="">
+                <Param name="State"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetControlDelay" func="no">
+            <Overload retVal="">
+                <Param name="Delay"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetDefaultMouseSpeed" func="no">
+            <Overload retVal="">
+                <Param name="Speed"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetEnv" func="no">
+            <Overload retVal="">
+                <Param name="Var"/>
+                <Param name="Value"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetFormat" func="no">
+            <Overload retVal="">
+                <Param name="NumberType"/>
+                <Param name="Format"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetKeyDelay" func="no">
+            <Overload retVal="">
+                <Param name="Delay"/>
+                <Param name="PressDuration"/>
+                <Param name="Play"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="SetLabel"/>
-        <KeyWord name="SetMouseDelay"/>
-        <KeyWord name="SetNumlockState"/>
-        <KeyWord name="SetScrollLockState"/>
-        <KeyWord name="SetStoreCapslockMode"/>
-        <KeyWord name="SetTimer"/>
-        <KeyWord name="SetTitleMatchMode"/>
-        <KeyWord name="SetWinDelay"/>
-        <KeyWord name="SetWorkingDir"/>
+        <KeyWord name="SetMouseDelay" func="no">
+            <Overload retVal="">
+                <Param name="Delay"/>
+                <Param name="Play"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetNumlockState" func="no">
+            <Overload retVal="">
+                <Param name="State"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetRegView" func="no">
+            <Overload retVal="">
+                <Param name="RegView"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetScrollLockState" func="no">
+            <Overload retVal="">
+                <Param name="State"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetStoreCapslockMode" func="no">
+            <Overload retVal="">
+                <Param name="On|Off"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetTimer" func="no">
+            <Overload retVal="">
+                <Param name="Label"/>
+                <Param name="Period|On|Off"/>
+                <Param name="Priority"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetTitleMatchMode" func="no">
+            <Overload retVal="">
+                <Param name="MatchMode"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="Fast|Slow"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetWinDelay" func="no">
+            <Overload retVal="">
+                <Param name="Delay"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SetWorkingDir" func="no">
+            <Overload retVal="">
+                <Param name="DirName"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Shift"/>
         <KeyWord name="ShiftAltTab"/>
         <KeyWord name="ShiftDown"/>
         <KeyWord name="shiftup"/>
         <KeyWord name="Show"/>
-        <KeyWord name="Shutdown"/>
+        <KeyWord name="Shutdown" func="no">
+            <Overload retVal="">
+                <Param name="Code"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Sin" func="yes">
             <Overload retVal="">
                 <Param name="Number"/>
             </Overload>
         </KeyWord>
         <KeyWord name="Single"/>
-        <KeyWord name="Sleep"/>
+        <KeyWord name="Sleep" func="no">
+            <Overload retVal="">
+                <Param name="Delay"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Slider"/>
-        <KeyWord name="Sort"/>
+        <KeyWord name="Sort" func="no">
+            <Overload retVal="">
+                <Param name="VarName"/>
+                <Param name="Options"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="SortDesc"/>
-        <KeyWord name="SoundBeep"/>
-        <KeyWord name="SoundGet"/>
-        <KeyWord name="SoundGetWaveVolume"/>
-        <KeyWord name="SoundPlay"/>
-        <KeyWord name="SoundSet"/>
-        <KeyWord name="SoundSetWaveVolume"/>
+        <KeyWord name="SoundBeep" func="no">
+            <Overload retVal="">
+                <Param name="Frequency"/>
+                <Param name="Duration"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SoundGet" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="ComponentType"/>
+                <Param name="ControlType"/>
+                <Param name="DeviceNumber"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SoundGetWaveVolume" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="DeviceNumber"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SoundPlay" func="no">
+            <Overload retVal="">
+                <Param name="Filename"/>
+                <Param name="wait"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SoundSet" func="no">
+            <Overload retVal="">
+                <Param name="NewSetting"/>
+                <Param name="ComponentType"/>
+                <Param name="ControlType"/>
+                <Param name="DeviceNumber"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SoundSetWaveVolume" func="no">
+            <Overload retVal="">
+                <Param name="Percent"/>
+                <Param name="DeviceNumber"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Space"/>
-        <KeyWord name="SplashImage"/>
+        <KeyWord name="SplashImage" func="no">
+            <Overload retVal="">
+                <Param name="Off"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="ImageFile"/>
+                <Param name="Options"/>
+                <Param name="SubText"/>
+                <Param name="MainText"/>
+                <Param name="WinTitle"/>
+                <Param name="FontName"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="SplashTextOff"/>
-        <KeyWord name="SplashTextOn"/>
-        <KeyWord name="SplitPath"/>
+        <KeyWord name="SplashTextOn" func="no">
+            <Overload retVal="">
+                <Param name="Width"/>
+                <Param name="Height"/>
+                <Param name="Title"/>
+                <Param name="Text"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SplitPath func="no">
+            <Overload retVal="">
+                <Param name="InputVar"/>
+                <Param name="OutFileName"/>
+                <Param name="OutDir"/>
+                <Param name="OutExtension"/>
+                <Param name="OutNameNoExt"/>
+                <Param name="OutDrive"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Sqrt" func="yes">
             <Overload retVal="">
                 <Param name="Number"/>
@@ -1679,29 +1974,141 @@
         <KeyWord name="Static"/>
         <KeyWord name="Status"/>
         <KeyWord name="StatusBar"/>
-        <KeyWord name="StatusBarGetText"/>
-        <KeyWord name="StatusBarWait"/>
+        <KeyWord name="StatusBarGetText" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Part#"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StatusBarWait" func="no">
+            <Overload retVal="">
+                <Param name="BarText"/>
+                <Param name="Seconds"/>
+                <Param name="Part#"/>
+                <Param name="WinTitle"/>
+                <Param name="WinText"/>
+                <Param name="ExcludeTitle"/>
+                <Param name="ExcludeText"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="StatusCD"/>
-        <KeyWord name="StrGet"/>
+        <KeyWord name="StrGet" func="yes">
+            <Overload retVal="">
+                <Param name="Address"/>
+                <Param name="Length"/>
+                <Param name="Encoding = None"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Strike"/>
-        <KeyWord name="StringCaseSense"/>
-        <KeyWord name="StringGetPos"/>
-        <KeyWord name="StringLeft"/>
-        <KeyWord name="StringLen"/>
-        <KeyWord name="StringLower"/>
-        <KeyWord name="StringMid"/>
-        <KeyWord name="StringReplace"/>
-        <KeyWord name="StringRight"/>
-        <KeyWord name="StringSplit"/>
-        <KeyWord name="StringTrimLeft"/>
-        <KeyWord name="StringTrimRight"/>
-        <KeyWord name="StringUpper"/>
+        <KeyWord name="StringCaseSense" func="no">
+            <Overload retVal="">
+                <Param name="On|Off|Locale"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringGetPos" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="SearchText"/>
+                <Param name="L#|R#"/>
+                <Param name="Offset"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringLeft" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="Count"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringLen" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringLower" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="T"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringMid" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="StartChar"/>
+                <Param name="Count"/>
+                <Param name="L"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringReplace" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="SearchText"/>
+                <Param name="ReplaceText"/>
+                <Param name="ReplaceAll?"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringRight" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="Count"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringSplit" func="no">
+            <Overload retVal="">
+                <Param name="OutputArray"/>
+                <Param name="InputVar"/>
+                <Param name="Delimiters"/>
+                <Param name="OmitChars"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringTrimLeft" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="Count"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringTrimRight" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="Count"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="StringUpper" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="InputVar"/>
+                <Param name="T"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="StrLen" func="yes">
             <Overload retVal="">
                 <Param name="String"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="StrPut"/>
+        <KeyWord name="StrPut" func="yes">
+            <Overload retVal="">
+                <Param name="String"/>
+                <Param name="Encoding = None"/>
+            </Overload>
+            <Overload retVal="">
+                <Param name="String"/>
+                <Param name="Address"/>
+                <Param name="Length"/>
+                <Param name="Encoding = None"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="Style"/>
         <KeyWord name="Submit"/>
         <KeyWord name="SubStr" func="yes">
@@ -1715,8 +2122,18 @@
                 <Param name="Length"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="Suspend"/>
-        <KeyWord name="SysGet"/>
+        <KeyWord name="Suspend" func="no">
+            <Overload retVal="">
+                <Param name="Mode"/>
+            </Overload>
+        </KeyWord>
+        <KeyWord name="SysGet" func="no">
+            <Overload retVal="">
+                <Param name="OutputVar"/>
+                <Param name="Sub-command"/>
+                <Param name="Param3"/>
+            </Overload>
+        </KeyWord>
         <KeyWord name="SysMenu"/>
         <KeyWord name="Tab"/>
         <KeyWord name="Tab2"/>
