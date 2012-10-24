@@ -9,7 +9,7 @@
         <!-- Info: Save this as an xml file named after your language.-->
         <!-- Info: Put the file in %install_Dir%\plugins\APIs.-->
         <!-- Info: Example: %Install_Dir%\plugins\APIs\AutoHotkey.xml.-->
-        <Environment ignoreCase="yes" startFunc="(" stopFunc=")" paramSeparator="|" terminal="" additionalWordChar="#{@"/>
+        <Environment ignoreCase="yes" startFunc="(" stopFunc=")" paramSeparator="," terminal="" additionalWordChar="#{@"/>
         <KeyWord name="Abort"/>
         <KeyWord name="AboveNormal"/>
         <KeyWord name="Abs" func="yes">
