@@ -1,6 +1,11 @@
 <NotepadPlus>
     <UserLang name="AutoHotkey" ext="ahk ahkl" udlVersion="2.0">
-        <!-- %AppData%\Notepad++\userDefineLang.xml -->
+        <!-- Notepad++ Syntax Highlighting for AutoHotkey -->
+        <!-- Version: 1.1.1 (Tue October 16, 2012) -->
+        <!-- Created: Mon October 15, 2012 -->
+        <!-- Main wordlist by: fincs & SciTE4AutoHotkey v3.0.00 -->
+        <!-- Credits: infogulch, jNizM, tidbit, twiz, vsub -->
+        <!-- Info: Save this as %AppData%\Notepad++\userDefineLanguage.xml.-->
         <Settings>
             <Global caseIgnored="yes" allowFoldOfComments="yes" forceLineCommentsAtBOL="no" foldCompact="no" />
             <Prefix Keywords1="no" Keywords2="no" Keywords3="yes" Keywords4="no" Keywords5="yes" Keywords6="no" Keywords7="no" Keywords8="yes" />
