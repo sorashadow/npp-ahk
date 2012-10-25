@@ -1955,7 +1955,7 @@
                 <Param name="Text"/>
             </Overload>
         </KeyWord>
-        <KeyWord name="SplitPath func="no">
+        <KeyWord name="SplitPath" func="no">
             <Overload retVal="">
                 <Param name="InputVar"/>
                 <Param name="OutFileName"/>
