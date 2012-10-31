@@ -1,7 +1,7 @@
 <NotepadPlus>
-    <UserLang name="AutoHotkey" ext="ahk ahkl" udlVersion="2.0">
+    <UserLang name="AutoHotkey" ext="ahk ahkl ia" udlVersion="2.0">
         <!-- Notepad++ Syntax Highlighting for AutoHotkey -->
-        <!-- Version: 1.1.1 (Tue October 16, 2012) -->
+        <!-- Version: 1.1.2 (Tue October 31, 2012) -->
         <!-- Created: Mon October 15, 2012 -->
         <!-- Main wordlist by: fincs & SciTE4AutoHotkey v3.0.00 -->
         <!-- Credits: infogulch, jNizM, tidbit, twiz, vsub -->
@@ -16,7 +16,7 @@
             <Keywords name="Numbers, prefixes" id="2"></Keywords>
             <Keywords name="Numbers, extras with prefixes" id="3"></Keywords>
             <Keywords name="Numbers, suffixes" id="4"></Keywords>
-            <Keywords name="Operators1" id="5">- ! &quot; &amp; ( ) , : ^ | + &lt; = &gt;</Keywords>
+            <Keywords name="Operators1" id="5">- ! % &quot; &amp; ( ) , . : ? ^ | ~ + &lt; = &gt;</Keywords>
             <Keywords name="Operators2" id="6"></Keywords>
             <Keywords name="Folders in code1, open" id="7">{ ;BeginRegion</Keywords>
             <Keywords name="Folders in code1, middle" id="8"></Keywords>
@@ -54,7 +54,7 @@
             <WordsStyle name="FOLDER IN CODE1" styleID="13" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="FOLDER IN CODE2" styleID="14" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN COMMENT" styleID="15" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS1" styleID="16" fgColor="EE0000" bgColor="FFFFFF" fontName="" fontStyle="4" nesting="0" />
+            <WordsStyle name="DELIMITERS1" styleID="16" fgColor="EE0000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS2" styleID="17" fgColor="FF8040" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS3" styleID="18" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS4" styleID="19" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
