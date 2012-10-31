@@ -565,14 +565,6 @@
         <KeyWord name="ExStyle"/>
         <KeyWord name="Extends"/>
         <KeyWord name="F1"/>
-        <KeyWord name="F2"/>
-        <KeyWord name="F3"/>
-        <KeyWord name="F4"/>
-        <KeyWord name="F5"/>
-        <KeyWord name="F6"/>
-        <KeyWord name="F7"/>
-        <KeyWord name="F8"/>
-        <KeyWord name="F9"/>
         <KeyWord name="F10"/>
         <KeyWord name="F11"/>
         <KeyWord name="F12"/>
@@ -583,11 +575,19 @@
         <KeyWord name="F17"/>
         <KeyWord name="F18"/>
         <KeyWord name="F19"/>
+        <KeyWord name="F2"/>
         <KeyWord name="F20"/>
         <KeyWord name="F21"/>
         <KeyWord name="F22"/>
         <KeyWord name="F23"/>
         <KeyWord name="F24"/>
+        <KeyWord name="F3"/>
+        <KeyWord name="F4"/>
+        <KeyWord name="F5"/>
+        <KeyWord name="F6"/>
+        <KeyWord name="F7"/>
+        <KeyWord name="F8"/>
+        <KeyWord name="F9"/>
         <KeyWord name="False"/>
         <KeyWord name="FileAppend" func="no">
             <Overload retVal="">
