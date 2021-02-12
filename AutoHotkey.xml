@@ -7,8 +7,10 @@
 		<!-- Main wordlist by: fincs & SciTE4AutoHotkey v3.0.00 -->
 		<!-- Credits: infogulch, jNizM, tidbit, twiz, vsub -->
 		<!-- Info: Save this as an xml file named after your language.-->
-		<!-- Info: Put the file in %install_Dir%\plugins\APIs.-->
-		<!-- Info: Example: %Install_Dir%\plugins\APIs\AutoHotkey.xml.-->
+		<!-- Info: Notepad++ v7.6.1 and older: Put the file in %install_Dir%\plugins\APIs -->
+		<!-- Info: Notepad++ v7.6.2 and newer: Put the file in %install_Dir%\autoCompletion -->
+		<!-- Info: pre-v7.6.1 Example: %Install_Dir%\plugins\APIs\AutoHotkey.xml.-->
+		<!-- Info: v7.6.2+ Example: %Install_Dir%\autoCompletion\AutoHotkey.xml.-->
 		<Environment ignoreCase="yes" startFunc="(" stopFunc=")" paramSeparator="," terminal="" additionalWordChar="#{@"/>
 		<KeyWord name="Abort"/>
 		<KeyWord name="AboveNormal"/>
