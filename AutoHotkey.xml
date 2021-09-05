@@ -2,15 +2,8 @@
 <NotepadPlus>
 	<AutoComplete language="AutoHotkey">
 		<!-- Notepad++ Autocomplete for AutoHotkey -->
-		<!-- Version: 1.1.4 (Wed October 24, 2012) -->
-		<!-- Created: Mon October 15, 2012 -->
 		<!-- Main wordlist by: fincs & SciTE4AutoHotkey v3.0.00 -->
 		<!-- Credits: infogulch, jNizM, tidbit, twiz, vsub -->
-		<!-- Info: Save this as an xml file named after your language.-->
-		<!-- Info: Notepad++ v7.6.1 and older: Put the file in %install_Dir%\plugins\APIs -->
-		<!-- Info: Notepad++ v7.6.2 and newer: Put the file in %install_Dir%\autoCompletion -->
-		<!-- Info: pre-v7.6.1 Example: %Install_Dir%\plugins\APIs\AutoHotkey.xml.-->
-		<!-- Info: v7.6.2+ Example: %Install_Dir%\autoCompletion\AutoHotkey.xml.-->
 		<Environment ignoreCase="yes" startFunc="(" stopFunc=")" paramSeparator="," terminal="" additionalWordChar="#{@"/>
 		<KeyWord name="Abort"/>
 		<KeyWord name="AboveNormal"/>
@@ -239,6 +232,7 @@
 		<KeyWord name="Capacity"/>
 		<KeyWord name="CapsLock"/>
 		<KeyWord name="Caption"/>
+		<KeyWord name="Case"/>
 		<KeyWord name="Catch" func="no">
 			<Overload retVal="">
 				<Param name="OutputVar"/>
@@ -1624,6 +1618,7 @@
 				<Param name="StartingPos = 1"/>
 			</Overload>
 		</KeyWord>
+
 		<KeyWord name="Region"/>
 		<KeyWord name="RegisterCallback" func="yes">
 			<Overload retVal="">
@@ -2128,6 +2123,11 @@
 				<Param name="Mode"/>
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Switch" func="no">
+			<Overload retVal="">
+				<Param name="SwitchValue"/>
+			</Overload>
+		</KeyWord>
 		<KeyWord name="SysGet" func="no">
 			<Overload retVal="">
 				<Param name="OutputVar"/>
@@ -2285,7 +2285,15 @@
 		<KeyWord name="__Delete"/>
 		<KeyWord name="__Get"/>
 		<KeyWord name="__New"/>
-		<KeyWord name="__Set"/><!--Alphabet Order:	 1 to 9, A to Z, _Missing:			0, a to z, #, {, %, @, $, ^, ~, +Alphabet Notes:	 # and { Seems broken, Possibly related to additionalWordChar="", but _ works.--><!--	'Broken' words list		<KeyWord name="#AllowSameLineComments"/>
+		<KeyWord name="__Set"/>
+<!--
+Alphabet Order:	 1 to 9, A to Z, _
+Missing:			0, a to z, #, {, %, @, $, ^, ~, +
+Alphabet Notes:	 # and { Seems broken, Possibly related to additionalWordChar="", but _ works.
+-->
+<!--	'Broken' words list
+
+		<KeyWord name="#AllowSameLineComments"/>
 		<KeyWord name="#ClipboardTimeout" func="no">
 			<Overload retVal="">
 				<Param name="Milliseconds"/>
@@ -2433,6 +2441,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="#WinActivateForce"/>
+
 		<KeyWord name="{Alt}"/>
 		<KeyWord name="{AltDown}"/>
 		<KeyWord name="{AltUp}"/>
@@ -2605,5 +2614,7 @@
 		<KeyWord name="{$}"/>
 		<KeyWord name="{^}"/>
 		<KeyWord name="{~}"/>
-		<KeyWord name="{+}"/>-->
-	</AutoComplete></NotepadPlus>
+		<KeyWord name="{+}"/>
+-->
+	</AutoComplete>
+</NotepadPlus>
